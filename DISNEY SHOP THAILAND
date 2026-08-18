@@ -1,0 +1,4935 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DISNEY SHOP THAILAND • MOVIE COLLECTION</title>
+
+    <meta name="description"
+          content="Disney Shop Thailand Movie Collection - Disney Animation and Pixar Movie Collection">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         INTRO / LOGO SCREEN
+    ========================== -->
+    <div id="introScreen" class="intro-screen">
+
+        <div class="intro-stars"></div>
+
+        <div class="intro-content">
+
+            <img
+                class="disney-intro-logo"
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Walt_Disney_Pictures.png"
+                alt="Walt Disney Pictures Logo"
+            >
+
+            <div class="intro-line"></div>
+
+            <p class="intro-subtitle">
+                DISNEY SHOP THAILAND
+            </p>
+
+            <h1>
+                MOVIE COLLECTION
+            </h1>
+
+            <p class="intro-description">
+                Walt Disney Animation Studios • Disney • Pixar
+            </p>
+
+            <button id="startBtn" class="start-btn">
+                ✨ START COLLECTION
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- =========================
+         MAIN WEBSITE
+    ========================== -->
+
+    <div id="website" class="website hidden">
+
+        <!-- HEADER -->
+        <header class="main-header">
+
+            <div class="header-inner">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        🏰
+                    </div>
+
+                    <div>
+                        <div class="brand-title">
+                            DISNEY SHOP THAILAND
+                        </div>
+
+                        <div class="brand-subtitle">
+                            MOVIE COLLECTION
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <nav class="main-nav">
+
+                    <a href="#home">
+                        หน้าแรก
+                    </a>
+
+                    <a href="#collection">
+                        Movie Collection
+                    </a>
+
+                    <a href="#about">
+                        เกี่ยวกับเว็บไซต์
+                    </a>
+
+                </nav>
+
+
+                <button id="cartButton" class="cart-button">
+                    🛒
+                    <span>ตะกร้า</span>
+                    <b id="cartCount">0</b>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section id="home" class="hero-section">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-small">
+                    WALT DISNEY • DISNEY • PIXAR
+                </span>
+
+                <h1>
+                    MOVIE
+                    <span>COLLECTION</span>
+                </h1>
+
+                <p>
+                    รวมภาพยนตร์แอนิเมชัน Disney และ Pixar
+                    ตั้งแต่ยุคคลาสสิกจนถึงภาพยนตร์รุ่นใหม่
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#collection"
+                        class="hero-button primary"
+                    >
+                        🎬 ดูภาพยนตร์ทั้งหมด
+                    </a>
+
+                    <button
+                        id="randomMovieBtn"
+                        class="hero-button secondary"
+                    >
+                        ✨ สุ่มภาพยนตร์
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-section">
+
+            <div class="stat-box">
+                <strong id="totalMovies">97</strong>
+                <span>ภาพยนตร์ทั้งหมด</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>66</strong>
+                <span>Disney Collection</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>31</strong>
+                <span>Pixar Collection</span>
+            </div>
+
+            <div class="stat-box">
+                <strong>1937–2026</strong>
+                <span>ช่วงปีภาพยนตร์</span>
+            </div>
+
+        </section>
+
+
+        <!-- COLLECTION -->
+        <main id="collection" class="collection-section">
+
+            <div class="section-heading">
+
+                <span>
+                    THE COLLECTION
+                </span>
+
+                <h2>
+                    Disney & Pixar Movie Collection
+                </h2>
+
+                <p>
+                    เลือกชมรายละเอียดภาพยนตร์ คะแนน IMDb
+                    Rotten Tomatoes วันฉาย และภาษา
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="control-panel">
+
+                <div class="search-box">
+
+                    <span>🔎</span>
+
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="ค้นหาชื่อภาพยนตร์ เช่น Frozen, Toy Story..."
+                    >
+
+                </div>
+
+
+                <select id="studioFilter">
+
+                    <option value="all">
+                        ทุกค่าย
+                    </option>
+
+                    <option value="Disney">
+                        Disney Collection
+                    </option>
+
+                    <option value="Pixar">
+                        Pixar Collection
+                    </option>
+
+                </select>
+
+
+                <select id="decadeFilter">
+
+                    <option value="all">
+                        ทุกยุค
+                    </option>
+
+                    <option value="1930">
+                        1930s
+                    </option>
+
+                    <option value="1940">
+                        1940s
+                    </option>
+
+                    <option value="1950">
+                        1950s
+                    </option>
+
+                    <option value="1960">
+                        1960s
+                    </option>
+
+                    <option value="1970">
+                        1970s
+                    </option>
+
+                    <option value="1980">
+                        1980s
+                    </option>
+
+                    <option value="1990">
+                        1990s
+                    </option>
+
+                    <option value="2000">
+                        2000s
+                    </option>
+
+                    <option value="2010">
+                        2010s
+                    </option>
+
+                    <option value="2020">
+                        2020s
+                    </option>
+
+                </select>
+
+
+                <select id="sortFilter">
+
+                    <option value="yearAsc">
+                        ปีเก่า → ใหม่
+                    </option>
+
+                    <option value="yearDesc">
+                        ปีใหม่ → เก่า
+                    </option>
+
+                    <option value="ratingDesc">
+                        IMDb สูง → ต่ำ
+                    </option>
+
+                    <option value="title">
+                        ชื่อ A → Z
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="result-info">
+
+                พบภาพยนตร์
+                <strong id="resultCount">97</strong>
+                เรื่อง
+
+            </div>
+
+
+            <!-- MOVIE GRID -->
+            <div
+                id="movieGrid"
+                class="movie-grid"
+            ></div>
+
+        </main>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section">
+
+            <div class="about-card">
+
+                <div class="about-logo">
+                    🏰
+                </div>
+
+                <div>
+
+                    <span>
+                        ABOUT THIS PROJECT
+                    </span>
+
+                    <h2>
+                        DISNEY SHOP THAILAND • MOVIE COLLECTION
+                    </h2>
+
+                    <p>
+                        เว็บไซต์ต้นแบบสำหรับโครงงานการออกแบบเว็บไซต์
+                        จำหน่ายและรวบรวมภาพยนตร์จากแผ่น CD/DVD
+                        ของ Disney และ Pixar โดยเน้นการนำเสนอข้อมูล
+                        ภาพยนตร์อย่างเป็นระบบและสวยงาม
+                    </p>
+
+                    <p>
+                        เว็บไซต์นี้เป็น Prototype สำหรับการศึกษา
+                        ไม่ได้เป็นเว็บไซต์จำหน่ายสินค้าอย่างเป็นทางการ
+                       ของ Disney หรือ Pixar
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div>
+                <strong>
+                    DISNEY SHOP THAILAND
+                </strong>
+
+                <span>
+                    • MOVIE COLLECTION
+                </span>
+            </div>
+
+            <p>
+                Educational Prototype Project • 1937–2026
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =========================
+         MOVIE MODAL
+    ========================== -->
+
+    <div
+        id="movieModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-box">
+
+            <button
+                id="closeModal"
+                class="close-modal"
+            >
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CART MODAL
+    ========================== -->
+
+    <div
+        id="cartModal"
+        class="modal hidden"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="cart-box">
+
+            <button
+                id="closeCart"
+                class="close-modal"
+            >
+                ×
+            </button>
+
+            <h2>
+                🛒 Movie Collection Cart
+            </h2>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+                จำนวนรายการ:
+                <strong id="cartTotal">0</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+/* =========================================================
+   DISNEY SHOP THAILAND • MOVIE COLLECTION
+   JAVASCRIPT
+========================================================= */
+
+
+/* =========================================================
+   CONFIG
+========================================================= */
+
+const DISNEY_LOGO =
+    "https://commons.wikimedia.org/wiki/Special:Redirect/file/Walt_Disney_Pictures.png";
+
+
+/*
+    IMPORTANT
+
+    เว็บไซต์นี้ไม่ฝัง YouTube iframe
+
+    จึงไม่มี:
+        <iframe src="youtube...">
+
+    แต่ใช้:
+        window.open()
+
+    เพื่อเปิดคลิป YouTube ในแท็บใหม่
+*/
+
+
+/* =========================================================
+   MOVIE DATA
+========================================================= */
+
+const disneyMovies = [
+
+{
+    title:"Snow White and the Seven Dwarfs",
+    thai:"สโนว์ไวท์กับคนแคระทั้งเจ็ด",
+    year:1937,
+    studio:"Disney",
+    us:"1937-12-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.6,
+    rt:97,
+    yt:"5fzZFQBXSLM",
+    img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Snow_White_and_the_Seven_Dwarfs_%28Style_B%29_poster.jpg/960px-Snow_White_and_the_Seven_Dwarfs_%28Style_B%29_poster.jpg"
+},
+
+{
+    title:"Pinocchio",
+    thai:"พินอคคิโอ",
+    year:1940,
+    studio:"Disney",
+    us:"1940-02-07",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.5,
+    rt:100,
+    yt:"GBgyVY_ClzQ",
+    img:"https://upload.wikimedia.org/wikipedia/th/thumb/b/ba/Pinocchio-1940-poster.jpg/250px-Pinocchio-1940-poster.jpg"
+},
+
+{
+    title:"Fantasia",
+    thai:"แฟนเทเชีย",
+    year:1940,
+    studio:"Disney",
+    us:"1940-11-13",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.7,
+    rt:95,
+    yt:"fuQF8Fd5c8k",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/6b/Fantasia1940.jpg"
+},
+
+{
+    title:"Dumbo",
+    thai:"ดัมโบ้",
+    year:1941,
+    studio:"Disney",
+    us:"1941-10-23",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:98,
+    yt:"tLtQ3bCvBA0",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/a7/Dumbo-1941-poster.jpg"
+},
+
+{
+    title:"Bambi",
+    thai:"แบมบี้",
+    year:1942,
+    studio:"Disney",
+    us:"1942-08-09",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:91,
+    yt:"yDGv4GIR7A4",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/88/Walt_Disney%27s_Bambi_poster.jpg"
+},
+
+{
+    title:"Saludos Amigos",
+    thai:"สโมสรคนรักโดนัลด์ ดั๊ก",
+    year:1942,
+    studio:"Disney",
+    us:"1942-08-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.1,
+    rt:80,
+    yt:"Qwdj6viHCh8",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/af/Saludosposter.jpg"
+},
+
+{
+    title:"The Three Caballeros",
+    thai:"สามเกลอผจญภัย",
+    year:1944,
+    studio:"Disney",
+    us:"1944-12-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.3,
+    rt:88,
+    yt:"tKO0T_1rL48",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/7b/Three_caballeros_poster.png"
+},
+
+{
+    title:"Make Mine Music",
+    thai:"เมค ไมน์ มิวสิก",
+    year:1946,
+    studio:"Disney",
+    us:"1946-04-20",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.2,
+    rt:70,
+    yt:"1N_3g1xPf7g",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/7d/Make_mine_music_poster.png"
+},
+
+{
+    title:"Fun and Fancy Free",
+    thai:"ฟัน แอนด์ แฟนซี ฟรี",
+    year:1947,
+    studio:"Disney",
+    us:"1947-09-27",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:70,
+    yt:"RFWTwxoxW5s",
+    img:"https://upload.wikimedia.org/wikipedia/en/b/b4/Funfanposter.jpg"
+},
+
+{
+    title:"Melody Time",
+    thai:"เมโลดี ไทม์",
+    year:1948,
+    studio:"Disney",
+    us:"1948-05-27",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.2,
+    rt:57,
+    yt:"BjgrjB_8vdg",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/26/Melody_Time_poster.jpg"
+},
+
+{
+    title:"The Adventures of Ichabod and Mr. Toad",
+    thai:"นิทานอัศจรรย์ของอิคาบอดและนายโทด",
+    year:1949,
+    studio:"Disney",
+    us:"1949-10-05",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:96,
+    yt:"Ju_BnpsfznA",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/77/Ichabodposter.jpg"
+},
+
+{
+    title:"Cinderella",
+    thai:"ซินเดอเรลล่า",
+    year:1950,
+    studio:"Disney",
+    us:"1950-02-15",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:97,
+    yt:"UcjYD91YW_M",
+    img:"https://upload.wikimedia.org/wikipedia/commons/1/1d/1950_is_the_Cinderella_year.jpg"
+},
+
+{
+    title:"Alice in Wonderland",
+    thai:"อลิสท่องแดนมหัศจรรย์",
+    year:1951,
+    studio:"Disney",
+    us:"1951-07-26",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:85,
+    yt:"PA-h3-0wheo",
+    img:"https://upload.wikimedia.org/wikipedia/commons/f/f6/Alice_in_Wonderland_Poster.png"
+},
+
+{
+    title:"Peter Pan",
+    thai:"ปีเตอร์ แพน",
+    year:1953,
+    studio:"Disney",
+    us:"1953-02-05",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:77,
+    yt:"L-o0ufCPANo",
+    img:"https://upload.wikimedia.org/wikipedia/commons/d/dc/Peter_Pan_%281953_poster%29.jpg"
+},
+
+{
+    title:"Lady and the Tramp",
+    thai:"ทาสรักอสูร / ทาสรักสายพันธุ์โฮ่ง",
+    year:1955,
+    studio:"Disney",
+    us:"1955-06-22",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:93,
+    yt:"oVG-vQNbiJQ",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/39/Lady-and-tramp-1955-poster.jpg"
+},
+
+{
+    title:"Sleeping Beauty",
+    thai:"เจ้าหญิงนิทรา",
+    year:1959,
+    studio:"Disney",
+    us:"1959-01-29",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:95,
+    yt:"EO2ADZtvYOU",
+    img:"https://upload.wikimedia.org/wikipedia/commons/6/6c/Sleeping_Beauty_%281959_poster_-_Style_A%29.jpg"
+},
+
+{
+    title:"101 Dalmatians",
+    thai:"101 ดัลเมเชียนส์",
+    year:1961,
+    studio:"Disney",
+    us:"1961-01-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:98,
+    yt:"rKCEyXoPNEU",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/cd/One_Hundred_and_One_Dalmatians_movie_poster.jpg"
+},
+
+{
+    title:"The Sword in the Stone",
+    thai:"อภินิหารดาบกู้แผ่นดิน",
+    year:1963,
+    studio:"Disney",
+    us:"1963-12-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.0,
+    rt:66,
+    yt:"UI57RCDMgVM",
+    img:"https://upload.wikimedia.org/wikipedia/en/d/d8/SwordintheStonePoster.JPG"
+},
+
+{
+    title:"The Jungle Book",
+    thai:"เมาคลีลูกหมาป่า",
+    year:1967,
+    studio:"Disney",
+    us:"1967-10-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.6,
+    rt:88,
+    yt:"xFdtyGoVSDE",
+    img:"https://upload.wikimedia.org/wikipedia/en/1/1d/Thejunglebook_movieposter.jpg"
+},
+
+{
+    title:"The Aristocats",
+    thai:"แมวไฮโซแมวสลัม",
+    year:1970,
+    studio:"Disney",
+    us:"1970-12-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:64,
+    yt:"ll0kt-Zzzo4",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/8d/Aristoposter.jpg"
+},
+
+{
+    title:"Robin Hood",
+    thai:"โรบิน ฮู้ด",
+    year:1973,
+    studio:"Disney",
+    us:"1973-11-08",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.5,
+    rt:55,
+    yt:"z4rLod7TBEY",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/91/Robinhood_1973_poster.png"
+},
+
+{
+    title:"The Many Adventures of Winnie the Pooh",
+    thai:"วินนี่ เดอะ พูห์ ผจญภัย",
+    year:1977,
+    studio:"Disney",
+    us:"1977-03-11",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.5,
+    rt:100,
+    yt:"pj2Gs-T5uhY",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/c2/The_Many_Adventures_of_Winnie_the_Pooh_poster.jpg"
+},
+
+{
+    title:"The Rescuers",
+    thai:"หนูหริ่งหนูหรอยกู้ภัย",
+    year:1977,
+    studio:"Disney",
+    us:"1977-06-22",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.9,
+    rt:80,
+    yt:"n1uvsKUdHdM",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/ac/Rescuersposter.jpg"
+},
+
+{
+    title:"The Fox and the Hound",
+    thai:"เพื่อนเพื่อนและเพื่อน",
+    year:1981,
+    studio:"Disney",
+    us:"1981-07-10",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:75,
+    yt:"SJ9hBibZkzM",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/70/The_Fox_and_the_Hound.jpg"
+},
+
+{
+    title:"The Black Cauldron",
+    thai:"หม้อแม่มดมืด",
+    year:1985,
+    studio:"Disney",
+    us:"1985-07-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.3,
+    rt:55,
+    yt:"isAtOHLiMH8",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/0a/The_Black_Cauldron_poster.jpg"
+},
+
+{
+    title:"The Great Mouse Detective",
+    thai:"ยอดนักสืบจิ๋ว",
+    year:1986,
+    studio:"Disney",
+    us:"1986-07-02",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:80,
+    yt:"N-aEr0kOQNU",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/a4/Mousedetectposter.jpg"
+},
+
+{
+    title:"Oliver & Company",
+    thai:"โอลิเวอร์กับเพื่อนพ้อง",
+    year:1988,
+    studio:"Disney",
+    us:"1988-11-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.7,
+    rt:50,
+    yt:"EExIKWcqSAI",
+    img:"https://upload.wikimedia.org/wikipedia/en/f/fd/Oliver_poster.jpg"
+},
+
+{
+    title:"The Little Mermaid",
+    thai:"เงือกน้อยผจญภัย",
+    year:1989,
+    studio:"Disney",
+    us:"1989-11-17",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.6,
+    rt:95,
+    yt:"nPE0f-MB_bQ",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/c0/The_Little_Mermaid_%28Official_1989_Film_Poster%29.png"
+},
+
+{
+    title:"The Rescuers Down Under",
+    thai:"หนูหริ่งหนูหรอยกู้ภัยในแดนจังเกิล",
+    year:1990,
+    studio:"Disney",
+    us:"1990-11-16",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:76,
+    yt:"DZ1Yv9oIiK4",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/05/Rescuersduposter.jpg"
+},
+
+{
+    title:"Beauty and the Beast",
+    thai:"โฉมงามกับอสูร",
+    year:1991,
+    studio:"Disney",
+    us:"1991-11-22",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.0,
+    rt:95,
+    yt:"iurbZwxKFUE",
+    img:"https://upload.wikimedia.org/wikipedia/en/5/5e/Beauty_and_the_Beast_%281991_film%29_poster.jpg"
+},
+
+{
+    title:"Aladdin",
+    thai:"อะลาดินกับตะเกียงวิเศษ",
+    year:1992,
+    studio:"Disney",
+    us:"1992-11-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.0,
+    rt:95,
+    yt:"eTjHiQKJUDY",
+    img:"https://upload.wikimedia.org/wikipedia/en/b/bd/Aladdin_%281992_Disney_film%29_poster.jpg"
+},
+
+{
+    title:"The Lion King",
+    thai:"เดอะ ไลออน คิง",
+    year:1994,
+    studio:"Disney",
+    us:"1994-06-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.5,
+    rt:93,
+    yt:"eHcZlPpNt0Q",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg"
+},
+
+{
+    title:"Pocahontas",
+    thai:"โพคาฮอนทัส",
+    year:1995,
+    studio:"Disney",
+    us:"1995-06-23",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.7,
+    rt:55,
+    yt:"5iB82S8rHyg",
+    img:"https://upload.wikimedia.org/wikipedia/en/5/57/Pocahontasposter.jpg"
+},
+
+{
+    title:"The Hunchback of Notre Dame",
+    thai:"คนค่อมแห่งโนเทรอดาม",
+    year:1996,
+    studio:"Disney",
+    us:"1996-06-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.0,
+    rt:71,
+    yt:"HUGraD-rxjk",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/26/The_Hunchback_of_Notre_Dame_1996_poster.jpg"
+},
+
+{
+    title:"Hercules",
+    thai:"เฮอร์คิวลิส",
+    year:1997,
+    studio:"Disney",
+    us:"1997-06-27",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:96,
+    yt:"vlblxDGoGwo",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/65/Hercules_%281997_film%29_poster.jpg"
+},
+
+{
+    title:"Mulan",
+    thai:"มู่หลาน",
+    year:1998,
+    studio:"Disney",
+    us:"1998-06-19",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.6,
+    rt:95,
+    yt:"HKH7_n425Ss",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/a3/Movie_poster_mulan.JPG"
+},
+
+{
+    title:"Tarzan",
+    thai:"ทาร์ซาน",
+    year:1999,
+    studio:"Disney",
+    us:"1999-06-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:89,
+    yt:"JYOMf4SS2oA",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/4f/Tarzan_%281999_film%29_-_theatrical_poster.jpg"
+},
+
+{
+    title:"Fantasia 2000",
+    thai:"แฟนเทเชีย 2000",
+    year:1999,
+    studio:"Disney",
+    us:"1999-12-17",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:81,
+    yt:"xPS9C7S1Z7c",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/c5/Fantasia2000_Poster.jpg"
+},
+
+{
+    title:"Dinosaur",
+    thai:"ไดโนเสาร์",
+    year:2000,
+    studio:"Disney",
+    us:"2000-05-19",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.4,
+    rt:64,
+    yt:"HlNRVZ871os",
+    img:"https://upload.wikimedia.org/wikipedia/en/b/bc/Dinosaurmovieposter.jpg"
+},
+
+{
+    title:"The Emperor's New Groove",
+    thai:"จักรพรรดิกลายพันธุ์ โฮ่งป่วนเมือง",
+    year:2000,
+    studio:"Disney",
+    us:"2000-12-15",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.4,
+    rt:86,
+    yt:"JX6btxoFhI8",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/69/Grooveposter.jpg"
+},
+
+{
+    title:"Atlantis: The Lost Empire",
+    thai:"แอตแลนติส: ผจญภัยอารยธรรมสุดขอบโลก",
+    year:2001,
+    studio:"Disney",
+    us:"2001-06-15",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:49,
+    yt:"JuWOj27MyMg",
+    img:"https://upload.wikimedia.org/wikipedia/en/d/de/Atlantis_The_Lost_Empire_poster.jpg"
+},
+
+{
+    title:"Lilo & Stitch",
+    thai:"ลีโล่ แอนด์ สติทช์",
+    year:2002,
+    studio:"Disney",
+    us:"2002-06-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.3,
+    rt:87,
+    yt:"9OAC55UWAQs",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/c6/LiloandStitchmovieposter.jpg"
+},
+
+{
+    title:"Treasure Planet",
+    thai:"เทรเชอร์ แพลเน็ต ถอดรหัสขุมทรัพย์จักรวาล",
+    year:2002,
+    studio:"Disney",
+    us:"2002-11-27",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:69,
+    yt:"DJNT7C61NrE",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/7e/Treasure_Planet_poster.jpg"
+},
+
+{
+    title:"Brother Bear",
+    thai:"มหัศจรรย์หมีผู้ยิ่งใหญ่",
+    year:2003,
+    studio:"Disney",
+    us:"2003-11-01",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.9,
+    rt:37,
+    yt:"9nWH0l2mhO0",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/86/Brother_Bear_Poster.png"
+},
+
+{
+    title:"Home on the Range",
+    thai:"โฮม ออน เดอะ เรนจ์ สามเสือสาวดาวโคบาล",
+    year:2004,
+    studio:"Disney",
+    us:"2004-04-02",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:5.8,
+    rt:53,
+    yt:"r9T5XOBjFUE",
+    img:"https://upload.wikimedia.org/wikipedia/en/b/b9/Homerangeposter.jpg"
+},
+
+{
+    title:"Chicken Little",
+    thai:"กุ๊กไก่กู้โลก",
+    year:2005,
+    studio:"Disney",
+    us:"2005-11-04",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:5.7,
+    rt:36,
+    yt:"VUBFCaWiQ28",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/a5/Chickenlittlemcgiposter.jpg"
+},
+
+{
+    title:"Meet the Robinsons",
+    thai:"โกเซนิก มหาประดิษฐ์ผจญอนาคต",
+    year:2007,
+    studio:"Disney",
+    us:"2007-03-30",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:67,
+    yt:"S396-fnLldk",
+    img:"https://upload.wikimedia.org/wikipedia/en/d/dc/Meet_the_robinsons.jpg"
+},
+
+{
+    title:"Bolt",
+    thai:"โบลท์ ซูเปอร์โฮ่ง หัวใจฮีโร่",
+    year:2008,
+    studio:"Disney",
+    us:"2008-11-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:90,
+    yt:"Pj0a7GkMH3w",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/44/Bolt_ver2.jpg"
+},
+
+{
+    title:"The Princess and the Frog",
+    thai:"มหัศจรรย์มนตราเจ้าหญิงกบ",
+    year:2009,
+    studio:"Disney",
+    us:"2009-12-11",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:85,
+    yt:"uQBy6jqbmlU",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/81/The_Princess_and_the_Frog_poster.jpg"
+},
+
+{
+    title:"Tangled",
+    thai:"ราพันเซล เจ้าหญิงผมยาวกับโจรซ่า",
+    year:2010,
+    studio:"Disney",
+    us:"2010-11-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.7,
+    rt:89,
+    yt:"2f516ZLyC6U",
+    img:"https://upload.wikimedia.org/wikipedia/en/a/a8/Tangled_poster.jpg"
+},
+
+{
+    title:"Winnie the Pooh",
+    thai:"วินนี่ เดอะ พูห์",
+    year:2011,
+    studio:"Disney",
+    us:"2011-07-15",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:80,
+    yt:"QbFz--GCkOM",
+    img:"https://upload.wikimedia.org/wikipedia/en/e/e2/Winnie_the_Pooh_Poster.jpg"
+},
+
+{
+    title:"Wreck-It Ralph",
+    thai:"ราล์ฟวายร้ายหัวใจฮีโร่",
+    year:2012,
+    studio:"Disney",
+    us:"2012-11-02",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.7,
+    rt:87,
+    yt:"87E6N7ToCxs",
+    img:"https://upload.wikimedia.org/wikipedia/en/1/15/Wreckitralphposter.jpeg"
+},
+
+{
+    title:"Frozen",
+    thai:"ผจญภัยแดนคำสาปราชินีหิมะ",
+    year:2013,
+    studio:"Disney",
+    us:"2013-11-27",
+    th:"2013-12-05",
+    imdb:7.4,
+    rt:90,
+    yt:"TbQm5doF_Uc",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg"
+},
+
+{
+    title:"Planes",
+    thai:"เพลนส์ เหินซิ่งชิงเจ้าเวหา",
+    year:2013,
+    studio:"Disney",
+    us:"2013-08-09",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:5.7,
+    rt:25,
+    yt:"YRjztG65XgI",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/7b/Planes_FilmPoster.jpeg"
+},
+
+{
+    title:"Big Hero 6",
+    thai:"บิ๊กฮีโร่ 6",
+    year:2014,
+    studio:"Disney",
+    us:"2014-11-07",
+    th:"2014-12-04",
+    imdb:7.8,
+    rt:90,
+    yt:"z3biFxZIJOQ",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/4b/Big_Hero_6_%28film%29_poster.jpg"
+},
+
+{
+    title:"Planes: Fire & Rescue",
+    thai:"เพลนส์ ผจญเพลิงเหินเวหา",
+    year:2014,
+    studio:"Disney",
+    us:"2014-07-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.0,
+    rt:45,
+    yt:"uYXxqwk7EMY",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/cc/Planes_Fire_%26_Rescue_poster.jpg"
+},
+
+{
+    title:"Zootopia",
+    thai:"นครสัตว์มหาสนุก",
+    year:2016,
+    studio:"Disney",
+    us:"2016-03-04",
+    th:"2016-03-25",
+    imdb:8.0,
+    rt:98,
+    yt:"jWM0ct-OLsM",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/96/Zootopia_%28movie_poster%29.jpg"
+},
+
+{
+    title:"Moana",
+    thai:"โมอาน่า ผจญภัยหมู่เกาะจรจัด",
+    year:2016,
+    studio:"Disney",
+    us:"2016-11-23",
+    th:"2016-12-01",
+    imdb:7.6,
+    rt:95,
+    yt:"LKFuXETZUsI",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg"
+},
+
+{
+    title:"Ralph Breaks the Internet",
+    thai:"ราล์ฟตะลุยโลกอินเทอร์เน็ต",
+    year:2018,
+    studio:"Disney",
+    us:"2018-11-21",
+    th:"2018-11-22",
+    imdb:7.0,
+    rt:88,
+    yt:"DIBw9dSVKdU",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/0b/Ralph_Breaks_the_Internet_%282018_film_poster%29.png"
+},
+
+{
+    title:"Frozen II",
+    thai:"ผจญภัยปริศนาราชินีหิมะ",
+    year:2019,
+    studio:"Disney",
+    us:"2019-11-22",
+    th:"2019-11-21",
+    imdb:6.8,
+    rt:77,
+    yt:"Zi4LMpSDccc",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/89/Frozen_II_%282019_animated_film%29.jpg"
+},
+
+{
+    title:"Raya and the Last Dragon",
+    thai:"รายากับมังกรตัวสุดท้าย",
+    year:2021,
+    studio:"Disney",
+    us:"2021-03-05",
+    th:"2021-03-04",
+    imdb:7.3,
+    rt:93,
+    yt:"1VIZ89FEjYI",
+    img:"https://upload.wikimedia.org/wikipedia/en/e/ea/Raya_and_the_Last_Dragon.png"
+},
+
+{
+    title:"Encanto",
+    thai:"เมืองเวทมนตร์ คนมหัศจรรย์",
+    year:2021,
+    studio:"Disney",
+    us:"2021-11-24",
+    th:"2021-11-25",
+    imdb:7.2,
+    rt:91,
+    yt:"CaimKeDcudo",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/83/Encanto_poster.jpg"
+},
+
+{
+    title:"Strange World",
+    thai:"ลุยแดนมหัศจรรย์สุดขอบโลก",
+    year:2022,
+    studio:"Disney",
+    us:"2022-11-23",
+    th:"2022-11-24",
+    imdb:5.7,
+    rt:72,
+    yt:"bKh2G73gCCs",
+    img:"https://upload.wikimedia.org/wikipedia/en/f/fe/Strange_World_poster.jpg"
+},
+
+{
+    title:"Wish",
+    thai:"พรหมาเนรมิต",
+    year:2023,
+    studio:"Disney",
+    us:"2023-11-22",
+    th:"2023-11-23",
+    imdb:5.6,
+    rt:48,
+    yt:"oyRxxpD3yNw",
+    img:"https://upload.wikimedia.org/wikipedia/en/d/de/WishMoviePoster.jpg"
+},
+
+{
+    title:"Moana 2",
+    thai:"โมอาน่า 2",
+    year:2024,
+    studio:"Disney",
+    us:"2024-11-27",
+    th:"2024-11-28",
+    imdb:6.0,
+    rt:62,
+    yt:"hDZ7y8RP5HE",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/73/Moana_2_poster.jpg"
+},
+
+{
+    title:"Zootopia 2",
+    thai:"นครสัตว์มหาสนุก 2",
+    year:2025,
+    studio:"Disney",
+    us:"2025-11-26",
+    th:"2025-11-27",
+    imdb:7.5,
+    rt:94,
+    yt:"5AwtptT8X8k",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/6a/Zootopia_2_%282025_film%29.jpg"
+}
+
+];
+
+
+/* =========================================================
+   PIXAR MOVIES
+========================================================= */
+
+const pixarMovies = [
+
+{
+    title:"Toy Story",
+    thai:"ทอย สตอรี่",
+    year:1995,
+    studio:"Pixar",
+    us:"1995-11-22",
+    th:"1996-03-08",
+    imdb:8.3,
+    rt:100,
+    yt:"v-PjgYDrg70",
+    img:"https://upload.wikimedia.org/wikipedia/en/1/13/Toy_Story.jpg"
+},
+
+{
+    title:"A Bug's Life",
+    thai:"ตัวบั๊กส์ หัวใจไม่บั๊กส์",
+    year:1998,
+    studio:"Pixar",
+    us:"1998-11-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:92,
+    yt:"mE35XQFxbeo",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/cc/A_Bug%27s_Life.jpg"
+},
+
+{
+    title:"Toy Story 2",
+    thai:"ทอย สตอรี่ 2",
+    year:1999,
+    studio:"Pixar",
+    us:"1999-11-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.9,
+    rt:100,
+    yt:"xNWSGRD5CzU",
+    img:"https://upload.wikimedia.org/wikipedia/en/c/c0/Toy_Story_2.jpg"
+},
+
+{
+    title:"Monsters, Inc.",
+    thai:"บริษัท รับจ้างหลอน (ไม่) จำกัด",
+    year:2001,
+    studio:"Pixar",
+    us:"2001-11-02",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.1,
+    rt:96,
+    yt:"CGbgaHoapFM",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/63/Monsters_Inc.JPG"
+},
+
+{
+    title:"Finding Nemo",
+    thai:"นีโม...ปลาเล็ก หัวใจโต๊...โต",
+    year:2003,
+    studio:"Pixar",
+    us:"2003-05-30",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.2,
+    rt:99,
+    yt:"SPHfeNgogVs",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/29/Finding_Nemo.jpg"
+},
+
+{
+    title:"The Incredibles",
+    thai:"รวมเหล่ายอดคนพิทักษ์โลก",
+    year:2004,
+    studio:"Pixar",
+    us:"2004-11-05",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.0,
+    rt:97,
+    yt:"-UaGUdNJdRQ",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/27/The_Incredibles_%282004_animated_feature_film%29.jpg"
+},
+
+{
+    title:"Cars",
+    thai:"4 ล้อซิ่ง...ซ่าท้าโลก",
+    year:2006,
+    studio:"Pixar",
+    us:"2006-06-09",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:75,
+    yt:"W_H7_tDHFE8",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/34/Cars_2006.jpg"
+},
+
+{
+    title:"Ratatouille",
+    thai:"ระ-ทะ-ทู-อี่ พ่อครัวตัวจี๊ด หัวใจคับโลก",
+    year:2007,
+    studio:"Pixar",
+    us:"2007-06-29",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.1,
+    rt:96,
+    yt:"NgsQ8mVkN8w",
+    img:"https://upload.wikimedia.org/wikipedia/en/5/50/RatatouillePoster.jpg"
+},
+
+{
+    title:"WALL-E",
+    thai:"วอลล์-อี หุ่นจิ๋วหัวใจเกินร้อย",
+    year:2008,
+    studio:"Pixar",
+    us:"2008-06-27",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.4,
+    rt:95,
+    yt:"CZ1CATNbXg0",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/4c/WALL-E_poster.jpg"
+},
+
+{
+    title:"Up",
+    thai:"ปู่ซ่าบ้าพลัง",
+    year:2009,
+    studio:"Pixar",
+    us:"2009-05-29",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.3,
+    rt:98,
+    yt:"HWEW_qTLSEE",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/05/Up_%282009_film%29.jpg"
+},
+
+{
+    title:"Toy Story 3",
+    thai:"ทอย สตอรี่ 3",
+    year:2010,
+    studio:"Pixar",
+    us:"2010-06-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.3,
+    rt:98,
+    yt:"2BlMNH1QTeE",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/69/Toy_Story_3_poster.jpg"
+},
+
+{
+    title:"Cars 2",
+    thai:"สายลับสี่ล้อ ซิ่งสนั่นโลก",
+    year:2011,
+    studio:"Pixar",
+    us:"2011-06-24",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.2,
+    rt:40,
+    yt:"lg5hj2c5Nkk",
+    img:"https://upload.wikimedia.org/wikipedia/en/7/7f/Cars_2_Poster.jpg"
+},
+
+{
+    title:"Brave",
+    thai:"นักรบสาวหัวใจมหากาฬ",
+    year:2012,
+    studio:"Pixar",
+    us:"2012-06-22",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.1,
+    rt:79,
+    yt:"TEHWDA_6e3M",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/96/Brave_Poster.jpg"
+},
+
+{
+    title:"Monsters University",
+    thai:"มหา'ลัย มอนส์เตอร์",
+    year:2013,
+    studio:"Pixar",
+    us:"2013-06-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:80,
+    yt:"QxrQ6BaijAY",
+    img:"https://upload.wikimedia.org/wikipedia/en/2/2a/Monsters_University_poster_3.jpg"
+},
+
+{
+    title:"Inside Out",
+    thai:"มหัศจรรย์อารมณ์อลเวง",
+    year:2015,
+    studio:"Pixar",
+    us:"2015-06-19",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.1,
+    rt:98,
+    yt:"1HFv47QHWJU",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/0a/Inside_Out_%282015_film%29_poster.jpg"
+},
+
+{
+    title:"The Good Dinosaur",
+    thai:"ผจญภัยไดโนเสาร์เพื่อนรัก",
+    year:2015,
+    studio:"Pixar",
+    us:"2015-11-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.7,
+    rt:75,
+    yt:"O-RgquKVTPE",
+    img:"https://upload.wikimedia.org/wikipedia/en/8/80/The_Good_Dinosaur_poster.jpg"
+},
+
+{
+    title:"Finding Dory",
+    thai:"ผจญภัยดอรี่ขี้ลืม",
+    year:2016,
+    studio:"Pixar",
+    us:"2016-06-17",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:94,
+    yt:"JhvrQeY3doI",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/3e/Finding_Dory.jpg"
+},
+
+{
+    title:"Cars 3",
+    thai:"สี่ล้อซิ่ง ชิงบัลลังก์แชมป์",
+    year:2017,
+    studio:"Pixar",
+    us:"2017-06-16",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.7,
+    rt:69,
+    yt:"E4K7JgPJ8-s",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/94/Cars_3_poster.jpg"
+},
+
+{
+    title:"Coco",
+    thai:"วันอลวน วิญญาณอลเวง",
+    year:2017,
+    studio:"Pixar",
+    us:"2017-11-22",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.4,
+    rt:97,
+    yt:"Rvr68u6k5sI",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/98/Coco_%282017_film%29_poster.jpg"
+},
+
+{
+    title:"Incredibles 2",
+    thai:"รวมเหล่ายอดคนพิทักษ์โลก 2",
+    year:2018,
+    studio:"Pixar",
+    us:"2018-06-15",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.5,
+    rt:93,
+    yt:"i5qOzqD9Rms",
+    img:"https://upload.wikimedia.org/wikipedia/en/1/1f/Incredibles_2_%282018_animated_film%29.jpg"
+},
+
+{
+    title:"Toy Story 4",
+    thai:"ทอย สตอรี่ 4",
+    year:2019,
+    studio:"Pixar",
+    us:"2019-06-21",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.7,
+    rt:97,
+    yt:"wmiIUN-7qhE",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/4c/Toy_Story_4_poster.jpg"
+},
+
+{
+    title:"Onward",
+    thai:"คู่ซ่าล่ามนต์มหัศจรรย์",
+    year:2020,
+    studio:"Pixar",
+    us:"2020-03-06",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.4,
+    rt:88,
+    yt:"gn5QmllRCn4",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/03/Onward_poster.jpg"
+},
+
+{
+    title:"Soul",
+    thai:"อัศจรรย์วิญญาณอลเวง",
+    year:2020,
+    studio:"Pixar",
+    us:"2020-12-25",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:8.0,
+    rt:95,
+    yt:"xOsLIiBStEs",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/39/Soul_%282020_film%29_poster.jpg"
+},
+
+{
+    title:"Luca",
+    thai:"ลูก้า",
+    year:2021,
+    studio:"Pixar",
+    us:"2021-06-18",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.4,
+    rt:91,
+    yt:"mYfJxlgR2jw",
+    img:"https://upload.wikimedia.org/wikipedia/en/3/33/Luca_%282021_film%29.png"
+},
+
+{
+    title:"Turning Red",
+    thai:"เขินแรงแดงเป็นแพนด้า",
+    year:2022,
+    studio:"Pixar",
+    us:"2022-03-11",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.0,
+    rt:95,
+    yt:"pqdHP2dWQ9M",
+    img:"https://upload.wikimedia.org/wikipedia/en/9/9e/Turning_Red_poster.jpg"
+},
+
+{
+    title:"Lightyear",
+    thai:"บัซ ไลท์เยียร์",
+    year:2022,
+    studio:"Pixar",
+    us:"2022-06-17",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.1,
+    rt:74,
+    yt:"BwPL0Md_QFQ",
+    img:"https://upload.wikimedia.org/wikipedia/en/f/f9/Lightyear_%28film%29_poster.jpg"
+},
+
+{
+    title:"Elemental",
+    thai:"เมืองอลวนธาตุอลเวง",
+    year:2023,
+    studio:"Pixar",
+    us:"2023-06-16",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.0,
+    rt:73,
+    yt:"-cT495xKvvs",
+    img:"https://upload.wikimedia.org/wikipedia/en/4/4d/Elemental_final_poster.jpg"
+},
+
+{
+    title:"Inside Out 2",
+    thai:"มหัศจรรย์อารมณ์อลเวง 2",
+    year:2024,
+    studio:"Pixar",
+    us:"2024-06-14",
+    th:"2024-06-20",
+    imdb:7.5,
+    rt:91,
+    yt:"LEjhY15eCx0",
+    img:"https://upload.wikimedia.org/wikipedia/en/f/f7/Inside_Out_2_poster.jpg"
+},
+
+{
+    title:"Elio",
+    thai:"เอลิโอ",
+    year:2025,
+    studio:"Pixar",
+    us:"2025-06-20",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:6.8,
+    rt:83,
+    yt:"8ocanbiSyV4",
+    img:"https://upload.wikimedia.org/wikipedia/th/5/58/Elio_film_poster.jpeg"
+},
+
+{
+    title:"Hoppers",
+    thai:"เด้งโดด เปลี่ยนโหมดเป็นบีเวอร์",
+    year:2026,
+    studio:"Pixar",
+    us:"2026-03-06",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.2,
+    rt:95,
+    yt:"PypDSyIRRSs",
+    img:"https://upload.wikimedia.org/wikipedia/en/6/6c/Hoppers_film_poster.jpg"
+},
+
+{
+    title:"Toy Story 5",
+    thai:"ทอย สตอรี่ 5",
+    year:2026,
+    studio:"Pixar",
+    us:"2026-06-19",
+    th:"ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้",
+    imdb:7.5,
+    rt:90,
+    yt:"GGBgf8dcgyY",
+    img:"https://upload.wikimedia.org/wikipedia/en/0/08/Toy_Story_5_poster.jpg"
+}
+
+];
+
+
+/* =========================================================
+   COMBINE COLLECTION
+========================================================= */
+
+const movies = [
+    ...disneyMovies,
+    ...pixarMovies
+];
+
+
+/*
+    ตรวจสอบจำนวนภาพยนตร์
+
+    Disney = 66
+    Pixar = 31
+    รวม = 97
+*/
+
+console.log("Disney movies:", disneyMovies.length);
+console.log("Pixar movies:", pixarMovies.length);
+console.log("Total movies:", movies.length);
+
+
+/* =========================================================
+   DOM
+========================================================= */
+
+const introScreen =
+    document.getElementById("introScreen");
+
+const startBtn =
+    document.getElementById("startBtn");
+
+const website =
+    document.getElementById("website");
+
+const movieGrid =
+    document.getElementById("movieGrid");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const studioFilter =
+    document.getElementById("studioFilter");
+
+const decadeFilter =
+    document.getElementById("decadeFilter");
+
+const sortFilter =
+    document.getElementById("sortFilter");
+
+const resultCount =
+    document.getElementById("resultCount");
+
+const totalMovies =
+    document.getElementById("totalMovies");
+
+const movieModal =
+    document.getElementById("movieModal");
+
+const modalContent =
+    document.getElementById("modalContent");
+
+const closeModal =
+    document.getElementById("closeModal");
+
+const cartModal =
+    document.getElementById("cartModal");
+
+const cartButton =
+    document.getElementById("cartButton");
+
+const closeCart =
+    document.getElementById("closeCart");
+
+const cartItems =
+    document.getElementById("cartItems");
+
+const cartCount =
+    document.getElementById("cartCount");
+
+const cartTotal =
+    document.getElementById("cartTotal");
+
+const randomMovieBtn =
+    document.getElementById("randomMovieBtn");
+
+
+/* =========================================================
+   INITIALIZATION
+========================================================= */
+
+let cart = [];
+
+
+/* =========================================================
+   INTRO START
+========================================================= */
+
+startBtn.addEventListener("click", () => {
+
+    introScreen.style.opacity = "0";
+
+    introScreen.style.pointerEvents = "none";
+
+    setTimeout(() => {
+
+        introScreen.classList.add("hidden");
+
+        website.classList.remove("hidden");
+
+    }, 700);
+
+});
+
+
+/* =========================================================
+   FORMAT DATE
+========================================================= */
+
+function formatDate(dateString) {
+
+    if (!dateString ||
+        dateString === "ไม่พบข้อมูลวันฉายไทยที่ยืนยันได้") {
+
+        return dateString;
+    }
+
+    const date = new Date(dateString + "T00:00:00");
+
+    if (Number.isNaN(date.getTime())) {
+        return dateString;
+    }
+
+    return date.toLocaleDateString(
+        "th-TH",
+        {
+            day:"numeric",
+            month:"long",
+            year:"numeric"
+        }
+    );
+}
+
+
+/* =========================================================
+   DECADE
+========================================================= */
+
+function getDecade(year) {
+
+    return Math.floor(year / 10) * 10;
+
+}
+
+
+/* =========================================================
+   STAR DISPLAY
+========================================================= */
+
+function getStars(score) {
+
+    const normalized =
+        Math.max(
+            0,
+            Math.min(
+                5,
+                score / 2
+            )
+        );
+
+    const full =
+        Math.floor(normalized);
+
+    const half =
+        normalized - full >= .5 ? 1 : 0;
+
+    let result = "";
+
+    for (let i = 0; i < full; i++) {
+        result += "★";
+    }
+
+    if (half) {
+        result += "½";
+    }
+
+    while (result.length < 5) {
+        result += "☆";
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   RENDER MOVIES
+========================================================= */
+
+function renderMovies() {
+
+    const search =
+        searchInput.value
+            .trim()
+            .toLowerCase();
+
+    const studio =
+        studioFilter.value;
+
+    const decade =
+        decadeFilter.value;
+
+    const sort =
+        sortFilter.value;
+
+
+    let filtered =
+        movies.filter(movie => {
+
+            const matchSearch =
+                movie.title
+                    .toLowerCase()
+                    .includes(search)
+                ||
+                movie.thai
+                    .toLowerCase()
+                    .includes(search);
+
+            const matchStudio =
+                studio === "all"
+                ||
+                movie.studio === studio;
+
+            const matchDecade =
+                decade === "all"
+                ||
+                getDecade(movie.year)
+                    .toString()
+                    === decade;
+
+            return (
+                matchSearch &&
+                matchStudio &&
+                matchDecade
+            );
+
+        });
+
+
+    /* SORT */
+
+    if (sort === "yearAsc") {
+
+        filtered.sort(
+            (a,b) => a.year - b.year
+        );
+
+    }
+
+    if (sort === "yearDesc") {
+
+        filtered.sort(
+            (a,b) => b.year - a.year
+        );
+
+    }
+
+    if (sort === "ratingDesc") {
+
+        filtered.sort(
+            (a,b) => b.imdb - a.imdb
+        );
+
+    }
+
+    if (sort === "title") {
+
+        filtered.sort(
+            (a,b) =>
+                a.title.localeCompare(
+                    b.title
+                )
+        );
+
+    }
+
+
+    resultCount.textContent =
+        filtered.length;
+
+
+    movieGrid.innerHTML = "";
+
+
+    if (!filtered.length) {
+
+        movieGrid.innerHTML = `
+
+            <div class="empty-result">
+
+                <strong>🔎</strong>
+
+                <h3>
+                    ไม่พบภาพยนตร์
+                </h3>
+
+                <p>
+                    ลองเปลี่ยนคำค้นหาหรือ
+                    ตัวกรองภาพยนตร์
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    filtered.forEach(
+        movie => {
+
+            movieGrid.insertAdjacentHTML(
+                "beforeend",
+                createMovieCard(movie)
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   MOVIE CARD
+========================================================= */
+
+function createMovieCard(movie) {
+
+    return `
+
+        <article
+            class="movie-card"
+            data-title="${movie.title}"
+        >
+
+            <div class="poster-wrapper">
+
+                <img
+                    src="${movie.img}"
+                    alt="${movie.title}"
+                    loading="lazy"
+                    onerror="
+                        this.src='${DISNEY_LOGO}'
+                    "
+                >
+
+                <span class="studio-label">
+                    ${movie.studio}
+                </span>
+
+                <span class="rating-badge">
+                    ⭐ ${movie.imdb}
+                </span>
+
+            </div>
+
+
+            <div class="movie-body">
+
+                <div class="movie-year">
+                    ${movie.year}
+                </div>
+
+                <h3 class="movie-title">
+                    ${movie.title}
+                </h3>
+
+                <div class="movie-th">
+                    ${movie.thai}
+                </div>
+
+                <div class="stars">
+                    ${getStars(movie.imdb)}
+                </div>
+
+                <div class="movie-actions">
+
+                    <button
+                        class="details-btn"
+                        onclick="
+                            openMovie(
+                                '${escapeQuotes(movie.title)}'
+                            )
+                        "
+                    >
+                        📖 รายละเอียด
+                    </button>
+
+
+                    <a
+                        class="trailer-btn"
+                        href="https://www.youtube.com/watch?v=${movie.yt}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ▶ Trailer
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    `;
+
+}
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+function escapeQuotes(text) {
+
+    return text
+        .replace(/\\/g, "\\\\")
+        .replace(/'/g, "\\'");
+
+}
+
+
+/* =========================================================
+   OPEN MOVIE
+========================================================= */
+
+function openMovie(title) {
+
+    const movie =
+        movies.find(
+            item => item.title === title
+        );
+
+    if (!movie) {
+        return;
+    }
+
+
+    modalContent.innerHTML = `
+
+        <div class="modal-movie">
+
+            <img
+                class="modal-poster"
+                src="${movie.img}"
+                alt="${movie.title}"
+                onerror="
+                    this.src='${DISNEY_LOGO}'
+                "
+            >
+
+
+            <div class="modal-info">
+
+                <div class="movie-year">
+                    ${movie.studio}
+                    • ${movie.year}
+                </div>
+
+
+                <h2>
+                    ${movie.title}
+                </h2>
+
+
+                <div class="thai-title">
+                    ${movie.thai}
+                </div>
+
+
+                <div class="rating-panel">
+
+                    <div class="rating-item">
+
+                        <span>
+                            IMDb
+                        </span>
+
+                        <strong>
+                            ⭐ ${movie.imdb}/10
+                        </strong>
+
+                    </div>
+
+
+                    <div class="rating-item">
+
+                        <span>
+                            Rotten Tomatoes
+                        </span>
+
+                        <strong>
+                            🍅 ${movie.rt}%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <div class="info-item">
+
+                        <small>
+                            🇺🇸 วันฉายในสหรัฐอเมริกา
+                        </small>
+
+                        <strong>
+                            ${formatDate(movie.us)}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>
+                            🇹🇭 วันฉายในประเทศไทย
+                        </small>
+
+                        <strong>
+                            ${formatDate(movie.th)}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>
+                            🏢 Collection
+                        </small>
+
+                        <strong>
+                            ${movie.studio}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <small>
+                            📅 ปี
+                        </small>
+
+                        <strong>
+                            ${movie.year}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="language-box">
+
+                    🎙️ ภาษาเสียงที่รองรับใน Prototype
+
+                    <strong>
+                        English • Thai
+                    </strong>
+
+                    <br>
+
+                    <small>
+                        การมีเสียงพากย์ขึ้นอยู่กับ Edition
+                        ของแผ่น CD/DVD หรือสื่อที่จำหน่าย
+                    </small>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <!--
+                        IMPORTANT:
+                        เปิด YouTube แบบลิงก์ภายนอก
+                        ไม่ใช้ iframe
+                    -->
+
+                    <a
+                        class="youtube"
+                        href="
+                            https://www.youtube.com/watch?v=${movie.yt}
+                        "
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ▶ ดู Trailer บน YouTube
+                    </a>
+
+
+                    <button
+                        class="cart"
+                        onclick="
+                            addToCart(
+                                '${escapeQuotes(movie.title)}'
+                            )
+                        "
+                    >
+                        🛒 เพิ่มในตะกร้า
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    movieModal.classList.remove(
+        "hidden"
+    );
+
+}
+
+
+/* =========================================================
+   CLOSE MOVIE MODAL
+========================================================= */
+
+closeModal.addEventListener(
+    "click",
+    () => {
+
+        movieModal.classList.add(
+            "hidden"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE MODAL BY BACKDROP
+========================================================= */
+
+movieModal.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target.classList
+                .contains("modal-backdrop")
+        ) {
+
+            movieModal.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+function addToCart(title) {
+
+    const movie =
+        movies.find(
+            item => item.title === title
+        );
+
+    if (!movie) {
+        return;
+    }
+
+
+    const exists =
+        cart.some(
+            item =>
+                item.title === movie.title
+        );
+
+
+    if (!exists) {
+
+        cart.push(movie);
+
+    }
+
+
+    updateCart();
+
+
+    movieModal.classList.add(
+        "hidden"
+    );
+
+}
+
+
+/* =========================================================
+   UPDATE CART
+========================================================= */
+
+function updateCart() {
+
+    cartCount.textContent =
+        cart.length;
+
+    cartTotal.textContent =
+        cart.length;
+
+
+    if (!cart.length) {
+
+        cartItems.innerHTML = `
+
+            <div class="empty-result">
+
+                <strong>🛒</strong>
+
+                <h3>
+                    ยังไม่มีภาพยนตร์ในตะกร้า
+                </h3>
+
+                <p>
+                    เลือกภาพยนตร์แล้วกด
+                    "เพิ่มในตะกร้า"
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    cartItems.innerHTML =
+        cart.map(
+            (movie, index) => `
+
+                <div class="cart-row">
+
+                    <img
+                        src="${movie.img}"
+                        alt="${movie.title}"
+                    >
+
+                    <div class="cart-row-info">
+
+                        <strong>
+                            ${movie.title}
+                        </strong>
+
+                        <div>
+                            ${movie.thai}
+                        </div>
+
+                        <small>
+                            ${movie.year}
+                            • ${movie.studio}
+                        </small>
+
+                    </div>
+
+                    <button
+                        class="remove-cart"
+                        onclick="
+                            removeFromCart(${index})
+                        "
+                    >
+                        ลบ
+                    </button>
+
+                </div>
+
+            `
+        )
+        .join("");
+
+}
+
+
+/* =========================================================
+   REMOVE CART
+========================================================= */
+
+function removeFromCart(index) {
+
+    cart.splice(
+        index,
+        1
+    );
+
+    updateCart();
+
+}
+
+
+/* =========================================================
+   CART MODAL
+========================================================= */
+
+cartButton.addEventListener(
+    "click",
+    () => {
+
+        updateCart();
+
+        cartModal.classList.remove(
+            "hidden"
+        );
+
+    }
+);
+
+
+closeCart.addEventListener(
+    "click",
+    () => {
+
+        cartModal.classList.add(
+            "hidden"
+        );
+
+    }
+);
+
+
+cartModal.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target.classList
+                .contains("modal-backdrop")
+        ) {
+
+            cartModal.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   RANDOM MOVIE
+========================================================= */
+
+randomMovieBtn.addEventListener(
+    "click",
+    () => {
+
+        const random =
+            movies[
+                Math.floor(
+                    Math.random()
+                    *
+                    movies.length
+                )
+            ];
+
+        openMovie(
+            random.title
+        );
+
+    }
+);
+
+
+/* =========================================================
+   SEARCH / FILTER
+========================================================= */
+
+searchInput.addEventListener(
+    "input",
+    renderMovies
+);
+
+studioFilter.addEventListener(
+    "change",
+    renderMovies
+);
+
+decadeFilter.addEventListener(
+    "change",
+    renderMovies
+);
+
+sortFilter.addEventListener(
+    "change",
+    renderMovies
+);
+
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            movieModal.classList.add(
+                "hidden"
+            );
+
+            cartModal.classList.add(
+                "hidden"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   START
+========================================================= */
+
+totalMovies.textContent =
+    movies.length;
+
+renderMovies();
+
+updateCart();
+
+
+/* =========================================================
+   CONSOLE CHECK
+========================================================= */
+
+console.log(
+    "======================================"
+);
+
+console.log(
+    "DISNEY SHOP THAILAND"
+);
+
+console.log(
+    "MOVIE COLLECTION"
+);
+
+console.log(
+    "Disney:", disneyMovies.length
+);
+
+console.log(
+    "Pixar:", pixarMovies.length
+);
+
+console.log(
+    "TOTAL:", movies.length
+);
+
+console.log(
+    "YouTube iframe: DISABLED"
+);
+
+console.log(
+    "Trailer mode: EXTERNAL LINK"
+);
+
+console.log(
+    "======================================"
+);
+
+     /* =========================================================
+   DISNEY SHOP THAILAND • MOVIE COLLECTION
+   STYLE SHEET
+========================================================= */
+
+:root {
+
+    --blue-dark: #06132f;
+    --blue: #0c2b68;
+    --blue-light: #164a9b;
+
+    --gold: #f5c96a;
+    --gold-light: #ffe7a3;
+
+    --white: #ffffff;
+    --white-soft: #e9eef9;
+
+    --text-dark: #121826;
+    --text-gray: #657087;
+
+    --card: #ffffff;
+    --background: #f4f7fc;
+
+    --shadow:
+        0 18px 45px rgba(4, 20, 55, 0.14);
+
+    --radius: 20px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Kanit",
+        sans-serif;
+
+    background:
+        var(--background);
+
+    color:
+        var(--text-dark);
+
+    line-height: 1.6;
+
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   INTRO SCREEN
+========================================================= */
+
+.intro-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #183c7b 0%,
+            #0b2455 38%,
+            #030b1d 100%
+        );
+
+}
+
+.intro-screen::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.75) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        65px 65px;
+
+    opacity: .22;
+
+    animation:
+        starMove 18s linear infinite;
+
+}
+
+@keyframes starMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(65px);
+    }
+
+}
+
+
+.intro-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, 92%);
+
+    text-align: center;
+
+    color: white;
+
+    animation:
+        introAppear 1.4s ease;
+
+}
+
+@keyframes introAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+.disney-intro-logo {
+
+    width:
+        min(600px, 80vw);
+
+    max-height:
+        230px;
+
+    object-fit:
+        contain;
+
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(
+            0 8px 25px
+            rgba(255,255,255,.15)
+        );
+
+}
+
+
+.intro-line {
+
+    width: 100px;
+
+    height: 2px;
+
+    margin:
+        20px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.intro-subtitle {
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        5px;
+
+    font-size:
+        14px;
+
+}
+
+
+.intro-content h1 {
+
+    margin-top:
+        5px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(34px, 6vw, 70px);
+
+    letter-spacing:
+        5px;
+
+}
+
+
+.intro-description {
+
+    color:
+        #cbd8f2;
+
+    margin:
+        8px 0 30px;
+
+}
+
+
+.start-btn {
+
+    border:
+        1px solid
+        rgba(255,255,255,.35);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #d99b27
+        );
+
+    color:
+        #18223b;
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+    padding:
+        14px 32px;
+
+    border-radius:
+        999px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(245,201,106,.28);
+
+    transition:
+        .25s ease;
+
+}
+
+.start-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 18px 45px
+        rgba(245,201,106,.4);
+
+}
+
+
+/* =========================================================
+   WEBSITE
+========================================================= */
+
+.website {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+    background:
+        rgba(6,19,47,.92);
+
+    backdrop-filter:
+        blur(16px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+
+    color:
+        white;
+
+}
+
+
+.header-inner {
+
+    max-width:
+        1450px;
+
+    margin:
+        auto;
+
+    padding:
+        14px 25px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+}
+
+
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    margin-right:
+        auto;
+
+}
+
+
+.brand-icon {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            #b97819
+        );
+
+    font-size:
+        23px;
+
+}
+
+
+.brand-title {
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+}
+
+
+.brand-subtitle {
+
+    font-size:
+        11px;
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.main-nav {
+
+    display:
+        flex;
+
+    gap:
+        24px;
+
+}
+
+
+.main-nav a {
+
+    color:
+        #dce6fb;
+
+    font-size:
+        14px;
+
+    transition:
+        .2s;
+
+}
+
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+
+.cart-button {
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        white;
+
+    border-radius:
+        999px;
+
+    padding:
+        8px 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+}
+
+
+.cart-button b {
+
+    min-width:
+        22px;
+
+    height:
+        22px;
+
+    border-radius:
+        50%;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    background:
+        var(--gold);
+
+    color:
+        #17223c;
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+
+    min-height:
+        620px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    background:
+
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(44,112,230,.38),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #071536,
+            #0d2c66 55%,
+            #071536
+        );
+
+    color:
+        white;
+
+}
+
+
+.hero-section::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    border-radius:
+        50%;
+
+    right:
+        -150px;
+
+    bottom:
+        -220px;
+
+    border:
+        1px solid
+        rgba(245,201,106,.25);
+
+    box-shadow:
+        0 0 0 80px rgba(245,201,106,.04),
+        0 0 0 160px rgba(245,201,106,.025);
+
+}
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    max-width:
+        1100px;
+
+    width:
+        100%;
+
+    margin:
+        auto;
+
+    padding:
+        90px 25px;
+
+}
+
+
+.hero-small {
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        4px;
+
+    font-size:
+        13px;
+
+}
+
+
+.hero-content h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(50px, 9vw, 105px);
+
+    line-height:
+        .95;
+
+    margin:
+        15px 0 25px;
+
+}
+
+
+.hero-content h1 span {
+
+    display:
+        block;
+
+    color:
+        var(--gold);
+
+}
+
+
+.hero-content p {
+
+    max-width:
+        650px;
+
+    color:
+        #d4dff5;
+
+    font-size:
+        18px;
+
+}
+
+
+.hero-buttons {
+
+    margin-top:
+        32px;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+}
+
+
+.hero-button {
+
+    padding:
+        13px 22px;
+
+    border-radius:
+        999px;
+
+    font-weight:
+        600;
+
+    transition:
+        .25s;
+
+}
+
+
+.hero-button.primary {
+
+    background:
+        var(--gold);
+
+    color:
+        #15203a;
+
+}
+
+
+.hero-button.secondary {
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        white;
+
+}
+
+
+.hero-button:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats-section {
+
+    max-width:
+        1200px;
+
+    margin:
+        -55px auto 0;
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        15px;
+
+    padding:
+        0 20px;
+
+}
+
+
+.stat-box {
+
+    background:
+        white;
+
+    border:
+        1px solid
+        #e1e7f1;
+
+    border-radius:
+        18px;
+
+    padding:
+        20px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.stat-box strong {
+
+    display:
+        block;
+
+    color:
+        var(--blue);
+
+    font-size:
+        27px;
+
+}
+
+
+.stat-box span {
+
+    font-size:
+        13px;
+
+    color:
+        var(--text-gray);
+
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.collection-section {
+
+    max-width:
+        1450px;
+
+    margin:
+        auto;
+
+    padding:
+        90px 25px;
+
+}
+
+
+.section-heading {
+
+    text-align:
+        center;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+.section-heading > span {
+
+    color:
+        var(--blue-light);
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        4px;
+
+    font-weight:
+        600;
+
+}
+
+
+.section-heading h2 {
+
+    margin:
+        8px 0;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(32px, 5vw, 52px);
+
+    color:
+        var(--blue-dark);
+
+}
+
+
+.section-heading p {
+
+    color:
+        var(--text-gray);
+
+}
+
+
+/* =========================================================
+   CONTROL PANEL
+========================================================= */
+
+.control-panel {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(280px, 2fr)
+        repeat(3, 1fr);
+
+    gap:
+        12px;
+
+    background:
+        white;
+
+    border:
+        1px solid
+        #e2e8f2;
+
+    padding:
+        13px;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(10,30,70,.06);
+
+}
+
+
+.search-box {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    border:
+        1px solid
+        #dfe5ef;
+
+    border-radius:
+        12px;
+
+    padding:
+        0 13px;
+
+}
+
+
+.search-box input {
+
+    width:
+        100%;
+
+    border:
+        0;
+
+    outline:
+        0;
+
+    padding:
+        12px 0;
+
+    font-size:
+        14px;
+
+}
+
+
+.control-panel select {
+
+    border:
+        1px solid
+        #dfe5ef;
+
+    border-radius:
+        12px;
+
+    padding:
+        0 12px;
+
+    background:
+        white;
+
+    outline:
+        none;
+
+    color:
+        var(--text-dark);
+
+}
+
+
+.result-info {
+
+    margin:
+        20px 0;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        14px;
+
+}
+
+
+.result-info strong {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   MOVIE GRID
+========================================================= */
+
+.movie-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        20px;
+
+}
+
+
+.movie-card {
+
+    background:
+        white;
+
+    border:
+        1px solid
+        #e1e7f0;
+
+    border-radius:
+        var(--radius);
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        0 8px 30px
+        rgba(9,27,63,.08);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.movie-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(9,27,63,.16);
+
+}
+
+
+.poster-wrapper {
+
+    position:
+        relative;
+
+    aspect-ratio:
+        2 / 3;
+
+    overflow:
+        hidden;
+
+    background:
+        #dce3ef;
+
+}
+
+
+.poster-wrapper img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+.movie-card:hover .poster-wrapper img {
+
+    transform:
+        scale(1.06);
+
+}
+
+
+.studio-label {
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    left:
+        10px;
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(4,16,39,.85);
+
+    color:
+        white;
+
+    font-size:
+        10px;
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+
+.rating-badge {
+
+    position:
+        absolute;
+
+    right:
+        10px;
+
+    top:
+        10px;
+
+    padding:
+        6px 9px;
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(245,201,106,.95);
+
+    color:
+        #15203a;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+}
+
+
+.movie-body {
+
+    padding:
+        15px;
+
+}
+
+
+.movie-year {
+
+    color:
+        var(--blue-light);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+}
+
+
+.movie-title {
+
+    font-size:
+        17px;
+
+    font-weight:
+        600;
+
+    line-height:
+        1.3;
+
+    margin:
+        4px 0;
+
+}
+
+
+.movie-th {
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        12px;
+
+    min-height:
+        38px;
+
+}
+
+
+.stars {
+
+    color:
+        #f3b62f;
+
+    letter-spacing:
+        1px;
+
+    font-size:
+        12px;
+
+    margin:
+        8px 0;
+
+}
+
+
+.movie-actions {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        8px;
+
+    margin-top:
+        12px;
+
+}
+
+
+.movie-actions button,
+.movie-actions a {
+
+    border:
+        0;
+
+    padding:
+        9px 7px;
+
+    border-radius:
+        10px;
+
+    font-size:
+        11px;
+
+    text-align:
+        center;
+
+    font-weight:
+        600;
+
+}
+
+
+.details-btn {
+
+    background:
+        #edf2fa;
+
+    color:
+        var(--blue);
+
+}
+
+
+.trailer-btn {
+
+    background:
+        var(--blue);
+
+    color:
+        white;
+
+}
+
+
+.movie-actions button:hover,
+.movie-actions a:hover {
+
+    filter:
+        brightness(.94);
+
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+
+    padding:
+        80px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071535,
+            #0c2b68
+        );
+
+}
+
+
+.about-card {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        150px 1fr;
+
+    gap:
+        35px;
+
+    align-items:
+        center;
+
+    color:
+        white;
+
+}
+
+
+.about-logo {
+
+    width:
+        150px;
+
+    height:
+        150px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    font-size:
+        70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+}
+
+
+.about-card span {
+
+    color:
+        var(--gold);
+
+    letter-spacing:
+        3px;
+
+    font-size:
+        12px;
+
+}
+
+
+.about-card h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        32px;
+
+    margin:
+        8px 0 15px;
+
+}
+
+
+.about-card p {
+
+    color:
+        #cbd7ee;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background:
+        #030b1d;
+
+    color:
+        #aebbd3;
+
+    padding:
+        25px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    flex-wrap:
+        wrap;
+
+    font-size:
+        12px;
+
+}
+
+
+.footer strong {
+
+    color:
+        white;
+
+}
+
+
+.footer span {
+
+    color:
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        10000;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+}
+
+
+.modal-backdrop {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(1,8,24,.78);
+
+    backdrop-filter:
+        blur(8px);
+
+}
+
+
+.modal-box,
+.cart-box {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(950px, 100%);
+
+    max-height:
+        90vh;
+
+    overflow:
+        auto;
+
+    background:
+        white;
+
+    border-radius:
+        24px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.4);
+
+}
+
+
+.close-modal {
+
+    position:
+        absolute;
+
+    right:
+        15px;
+
+    top:
+        12px;
+
+    z-index:
+        5;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        0;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(5,18,45,.08);
+
+    font-size:
+        25px;
+
+}
+
+
+.modal-movie {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        280px 1fr;
+
+    gap:
+        30px;
+
+    padding:
+        30px;
+
+}
+
+
+.modal-poster {
+
+    width:
+        100%;
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.18);
+
+}
+
+
+.modal-info h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        34px;
+
+    color:
+        var(--blue-dark);
+
+    line-height:
+        1.2;
+
+}
+
+
+.modal-info .thai-title {
+
+    color:
+        var(--text-gray);
+
+    margin:
+        4px 0 20px;
+
+}
+
+
+.info-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        10px;
+
+    margin:
+        15px 0;
+
+}
+
+
+.info-item {
+
+    background:
+        #f5f7fb;
+
+    border-radius:
+        12px;
+
+    padding:
+        12px;
+
+}
+
+
+.info-item small {
+
+    display:
+        block;
+
+    color:
+        var(--text-gray);
+
+    font-size:
+        10px;
+
+}
+
+
+.info-item strong {
+
+    font-size:
+        14px;
+
+}
+
+
+.rating-panel {
+
+    display:
+        flex;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+
+    margin:
+        15px 0;
+
+}
+
+
+.rating-item {
+
+    flex:
+        1;
+
+    min-width:
+        150px;
+
+    padding:
+        12px;
+
+    border-radius:
+        13px;
+
+    background:
+        #06132f;
+
+    color:
+        white;
+
+}
+
+
+.rating-item span {
+
+    display:
+        block;
+
+    color:
+        #b9c5dc;
+
+    font-size:
+        11px;
+
+}
+
+
+.rating-item strong {
+
+    color:
+        var(--gold);
+
+    font-size:
+        20px;
+
+}
+
+
+.language-box {
+
+    padding:
+        12px;
+
+    background:
+        #eef4ff;
+
+    color:
+        var(--blue);
+
+    border-radius:
+        12px;
+
+    margin:
+        12px 0;
+
+}
+
+
+.modal-actions {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        20px;
+
+}
+
+
+.modal-actions a,
+.modal-actions button {
+
+    border:
+        0;
+
+    border-radius:
+        999px;
+
+    padding:
+        11px 18px;
+
+    font-weight:
+        600;
+
+}
+
+
+.modal-actions .youtube {
+
+    background:
+        #e31b23;
+
+    color:
+        white;
+
+}
+
+
+.modal-actions .cart {
+
+    background:
+        var(--gold);
+
+    color:
+        #15203a;
+
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.cart-box {
+
+    padding:
+        30px;
+
+}
+
+
+.cart-box h2 {
+
+    color:
+        var(--blue-dark);
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.cart-row {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        12px 0;
+
+    border-bottom:
+        1px solid
+        #e7ebf2;
+
+}
+
+
+.cart-row img {
+
+    width:
+        55px;
+
+    height:
+        75px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        8px;
+
+}
+
+
+.cart-row-info {
+
+    flex:
+        1;
+
+}
+
+
+.remove-cart {
+
+    border:
+        0;
+
+    background:
+        #ffe8e8;
+
+    color:
+        #b52d2d;
+
+    padding:
+        7px 10px;
+
+    border-radius:
+        8px;
+
+}
+
+
+.cart-total {
+
+    margin-top:
+        20px;
+
+    text-align:
+        right;
+
+    font-size:
+        18px;
+
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-result {
+
+    grid-column:
+        1 / -1;
+
+    padding:
+        80px 20px;
+
+    text-align:
+        center;
+
+    background:
+        white;
+
+    border-radius:
+        20px;
+
+    color:
+        var(--text-gray);
+
+}
+
+
+.empty-result strong {
+
+    display:
+        block;
+
+    font-size:
+        45px;
+
+    color:
+        var(--blue);
+
+    margin-bottom:
+        10px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .main-nav {
+        display: none;
+    }
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .control-panel {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .search-box {
+        grid-column:
+            1 / -1;
+    }
+
+    .stats-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .movie-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .movie-body {
+        padding: 11px;
+    }
+
+    .movie-title {
+        font-size: 14px;
+    }
+
+    .movie-th {
+        font-size: 10px;
+    }
+
+    .movie-actions {
+        grid-template-columns:
+            1fr;
+    }
+
+    .control-panel {
+        grid-template-columns:
+            1fr;
+    }
+
+    .search-box {
+        grid-column:
+            auto;
+    }
+
+    .stats-section {
+        grid-template-columns:
+            1fr 1fr;
+
+        margin-top:
+            -35px;
+    }
+
+    .modal-movie {
+        grid-template-columns:
+            1fr;
+
+        padding:
+            22px;
+    }
+
+    .modal-poster {
+        max-width:
+            240px;
+
+        margin:
+            auto;
+    }
+
+    .about-card {
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+    }
+
+    .about-logo {
+        margin:
+            auto;
+    }
+
+}
+
+
+@media (max-width: 420px) {
+
+    .movie-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .brand-subtitle {
+        display:
+            none;
+    }
+
+    .brand-title {
+        font-size:
+            12px;
+    }
+
+    .cart-button span {
+        display:
+            none;
+    }
+
+} 
